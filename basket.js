@@ -34,12 +34,6 @@ function addToCart(id, name, price) {
 
 function getTotalBasketCount() {
     return Object.values(basket).reduce((acc, product) => acc + product.count, 0);
-    // const  productsArr = Object.values(basket);
-    // let count = 0;
-    // for (const product of productsArr ) {
-    //     count += product.count;
-    // }
-    // return count;
 }
 
 function getTotalBasketPrice() {
@@ -51,7 +45,7 @@ function renderProductInBasket(id) {
     const basketRowEl = basketEl
         .querySelector(`.basketRow[data-productId="${id}"]`);
     if (!basketRowEl) {
-       renderNewProductInBasket(id);
+        renderNewProductInBasket(id);
         return;
     }
 
@@ -73,6 +67,5 @@ function renderNewProductInBasket(productId) {
 </div>
 </div>
     `;
-    basketTotalEl.insertAdjacentHTML('beforebegin', productRow)
-
+    basketTotalEl.insertAdjacentHTML('beforebegin', productRow);
 }
