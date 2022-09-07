@@ -68,5 +68,4 @@ function renderNewProductInBasket(productId) {
 </div>
     `;
     basketTotalEl.insertAdjacentHTML('beforebegin', productRow);
-
 }
